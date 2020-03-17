@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Quries</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{ url_for('static',filename='images/icons/favicon.ico') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/animate/animate.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/css-hamburgers/hamburgers.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/select2/select2.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="bg-contact2" style="background-image: url('../static/images/bg-01.jpg');">
+		<div class="container-contact2">
+			<div class="wrap-contact2">
+				
+				<form action="/json" method="POST" >
+					<span class="contact2-form-title">
+						Your Queries
+					</span>
+					<!-- <div class="wrap-input2 validate-input" data-validate="Please Enter an Operand">
+						<input class="input2" type="text" name="Operand_one">
+						<span class="focus-input2" data-placeholder="Operand one"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Please Enter an Operator">
+						<input class="input2" type="text" name="Operator">
+						<span class="focus-input2" data-placeholder="Operator"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate="Please Enter an Operand">
+						<input class="input2" type="text" name="Operand_two">
+						<span class="focus-input2" data-placeholder="Operand two"></span>
+					</div> --> 
+
+					<!-- <div class="wrap-input2 validate-input" data-validate="Please Enter an Operand">
+						<input class="input2" type="text" name="Operand_two">
+						<span class="focus-input2" data-placeholder="The input format was not right"></span>
+					</div> -->
+
+					<div class="wrap-input2 validate-inp ut">
+						<textarea class="input2" name="JSON"></textarea>
+						<span class="focus-input2" data-placeholder="Input for your JSON query"></span>
+					</div>
+
+					<div class="container-contact2-form-btn">
+						<div class="wrap-contact2-form-btn">
+							<div class="contact2-form-bgbtn"></div>
+							<button class="contact2-form-btn">
+								Send Your Query
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='vendor/bootstrap/js/popper.js') }}"></script>
+	<script src="{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='vendor/select2/select2.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+
+</body>
+</html>
