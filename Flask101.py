@@ -1,7 +1,6 @@
 
 import pandas as pd
 import numpy as np
-import json
 # FOR DETAILED DESCRIPTION OF THE CODE SEE THE README FILE
 
 class Add_columns():                      # This class adds extra columns to the data table 
@@ -372,8 +371,12 @@ class Input(Queries):               # This class has a method which assigns quer
         cls.q1 = q1
         cls.data_file =data_file
         
-        df = [json.loads(line) for line in open('netaporter_gb_similar.json', 'r')]
-        data=pd.DataFrame(df)
+        # df = [json.loads(line) for line in open('netaporter_gb_similar.json', 'r')]
+        # data=pd.DataFrame(df)
+        
+        url2 = 'https://greendeck-datasets-2.s3.amazonaws.com/netaporter_gb_similar.json'
+        data = pd.read_json(url2,lines=True,orient='columns')
+        
         # data = pd.read_json(cls.data_file,lines=True,orient='columns')     
 
         query = cls.q1["query_type"]
