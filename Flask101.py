@@ -366,16 +366,16 @@ class Input(Queries):               # This class has a method which assigns quer
             return self.competition_discount_diff_list()
     
     @classmethod        
-    def convert(cls,data_file,q1):                      # It's a class method for transforming inputs.
+    def convert(cls,data,q1):                      # It's a class method for transforming inputs.
         
         cls.q1 = q1
-        cls.data_file =data_file
+        # cls.data = data
         
         # df = [json.loads(line) for line in open('netaporter_gb_similar.json', 'r')]
         # data=pd.DataFrame(df)
         
-        url2 = 'https://greendeck-datasets-2.s3.amazonaws.com/netaporter_gb_similar.json'
-        data = pd.read_json(url2,lines=True,orient='columns')
+#         url2 = 'https://greendeck-datasets-2.s3.amazonaws.com/netaporter_gb_similar.json'
+#         data = pd.read_json(url2,lines=True,orient='columns')
         
         # data = pd.read_json(cls.data_file,lines=True,orient='columns')     
 
