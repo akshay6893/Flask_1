@@ -249,7 +249,11 @@ class Queries(Filters):                                # This Class has methods 
         listofarray = (self.prod_to_dis(inter))
 
         count = len(listofarray)
-        avg = ((sum(listofarray))/(count)).tolist()
+        
+        if count == 0:
+            return ["The returned list for these filters is empty."]
+        else:
+            avg = ((sum(listofarray))/count).tolist()
 
         return [f"The number of discounts for these filters are {count}",f"The average discount for these filters is {avg}"]
     
