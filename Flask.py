@@ -16,8 +16,8 @@ def json():
         # data_file = "netaporter_gb_similar.json" 
         url2 = 'https://greendeck-datasets-2.s3.amazonaws.com/netaporter_gb_similar.json'
         data = pd.read_json(url2,lines=True,orient='columns')
-        ff = Input.convert(data,json_data).get_results()          
-        return render_template('result.html',message = ff )
+        # ff = Input.convert(data,json_data).get_results()          
+        return render_template('result.html',message = data )
 
 
 if __name__=='__main__':
